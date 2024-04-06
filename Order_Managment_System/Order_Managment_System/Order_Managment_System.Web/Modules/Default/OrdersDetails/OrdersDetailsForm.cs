@@ -13,8 +13,8 @@ namespace Order_Managment_System.Default.Forms
     [BasedOnRow(typeof(Entities.OrdersDetailsRow), CheckNames = true)]
     public class OrdersDetailsForm
     {
-        public Int32 OrderId { get; set; }
-        public Int32 ProductId { get; set; }
+        /*public Int32 OrderId { get; set; }
+        */public Int32 ProductId { get; set; }
         public Int32 Quantity { get; set; }
         public Int32 UnitPrice { get; set; }
         public Int32 Subtotal { get; set; }

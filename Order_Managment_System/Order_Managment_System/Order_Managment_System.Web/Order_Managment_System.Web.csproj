@@ -1073,6 +1073,12 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Default.ProductsColumns.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Modules.Default.Orders.OrdersRepresentativesRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Modules.Default.PermissionKeys.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Imports\ServerTypings\Northwind.PermissionKeys.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
@@ -1966,6 +1972,7 @@
     <Compile Include="Migrations\DefaultDB\DefaultDB_20240327_120000_Customers.cs" />
     <Compile Include="Migrations\DefaultDB\DefaultDB_20240327_135000_Orders.cs" />
     <Compile Include="Migrations\DefaultDB\DefaultDB_20240327_138000_Orders_Details.cs" />
+    <Compile Include="Migrations\DefaultDB\DefaultDB_20240327_148950_OrdersRepresentatives.cs" />
     <Compile Include="Modules\Administration\AdministrationNavigation.cs" />
     <Compile Include="Modules\Administration\Language\LanguageLookup.cs" />
     <Compile Include="Modules\Administration\RolePermission\RolePermissionUpdateRequest.cs" />
@@ -2018,6 +2025,8 @@
     <Compile Include="Modules\BasicSamples\Grids\StoredProcedureGrid\CustomerGrossSalesListRequest.cs" />
     <Compile Include="Modules\BasicSamples\Grids\StoredProcedureGrid\CustomerGrossSalesEndpoint.cs" />
     <Compile Include="Modules\BasicSamples\Grids\StoredProcedureGrid\CustomerGrossSalesRepository.cs" />
+    <Compile Include="Modules\Default\DefaultPermissionKeys.cs" />
+    <Compile Include="Modules\Default\Orders\OrdersRepresentativesRow.cs" />
     <Compile Include="Modules\Default\Orders\OrderStatus.cs" />
     <Compile Include="Modules\Northwind\Customer\CustomerGrossSalesRow.cs" />
     <Compile Include="Modules\BasicSamples\Grids\VSGalleryQA\VSGalleryQAColumns.cs" />

@@ -13,7 +13,7 @@ namespace Order_Managment_System.Migrations.DefaultDB
         {
             Create.Table("Orders_details")
                   .WithColumn("order_details_id").AsInt32().Identity().NotNullable().PrimaryKey()
-                  .WithColumn("order_id").AsInt32().NotNullable()
+                  .WithColumn("order_id").AsInt32().Nullable()
                   .WithColumn("product_id").AsInt32().NotNullable()
                   .WithColumn("UnitPrice").AsInt32().NotNullable()
                   .WithColumn("quantity").AsInt32()

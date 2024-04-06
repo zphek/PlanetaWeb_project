@@ -7,6 +7,7 @@
         PhoneNumber?: string;
         Address?: string;
         City?: string;
+        UserId?: number;
     }
 
     export namespace CustomersRow {
@@ -30,7 +31,8 @@
             Email = "Email",
             PhoneNumber = "PhoneNumber",
             Address = "Address",
-            City = "City"
+            City = "City",
+            UserId = "UserId"
         }
     }
 }

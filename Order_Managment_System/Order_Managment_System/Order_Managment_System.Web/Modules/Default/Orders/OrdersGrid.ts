@@ -2,6 +2,7 @@
 namespace Order_Managment_System.Default {
 
     @Serenity.Decorators.registerClass()
+    @Serenity.Decorators.filterable()
     export class OrdersGrid extends Serenity.EntityGrid<OrdersRow, any> {
         protected getColumnsKey() { return 'Default.Orders'; }
         protected getDialogType() { return OrdersDialog; }

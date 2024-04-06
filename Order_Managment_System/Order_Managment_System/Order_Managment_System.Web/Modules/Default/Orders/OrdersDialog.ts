@@ -2,6 +2,7 @@
 namespace Order_Managment_System.Default {
 
     @Serenity.Decorators.registerClass()
+    @Serenity.Decorators.panel()
     export class OrdersDialog extends Serenity.EntityDialog<OrdersRow, any> {
         protected getFormKey() { return OrdersForm.formKey; }
         protected getIdProperty() { return OrdersRow.idProperty; }

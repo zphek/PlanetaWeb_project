@@ -688,6 +688,7 @@ declare namespace Order_Managment_System.Default {
         PhoneNumber: Serenity.StringEditor;
         Address: Serenity.StringEditor;
         City: Serenity.StringEditor;
+        UserId: Serenity.LookupEditor;
     }
     class CustomersForm extends Serenity.PrefixedContext {
         static formKey: string;
@@ -704,6 +705,7 @@ declare namespace Order_Managment_System.Default {
         PhoneNumber?: string;
         Address?: string;
         City?: string;
+        UserId?: number;
     }
     namespace CustomersRow {
         const idProperty = "CustomerId";
@@ -722,7 +724,8 @@ declare namespace Order_Managment_System.Default {
             Email = "Email",
             PhoneNumber = "PhoneNumber",
             Address = "Address",
-            City = "City"
+            City = "City",
+            UserId = "UserId"
         }
     }
 }
@@ -749,7 +752,6 @@ declare namespace Order_Managment_System.Default {
 }
 declare namespace Order_Managment_System.Default {
     interface OrdersDetailsForm {
-        OrderId: Serenity.IntegerEditor;
         ProductId: Serenity.LookupEditor;
         Quantity: Serenity.IntegerEditor;
         UnitPrice: Serenity.IntegerEditor;
@@ -768,6 +770,7 @@ declare namespace Order_Managment_System.Default {
         ProductId?: number;
         Quantity?: number;
         Subtotal?: number;
+        UnitPrice?: number;
         OrderCustomerId?: number;
         OrderOrderDate?: string;
         OrderTotalAmount?: number;
@@ -790,6 +793,7 @@ declare namespace Order_Managment_System.Default {
             ProductId = "ProductId",
             Quantity = "Quantity",
             Subtotal = "Subtotal",
+            UnitPrice = "UnitPrice",
             OrderCustomerId = "OrderCustomerId",
             OrderOrderDate = "OrderOrderDate",
             OrderTotalAmount = "OrderTotalAmount",
@@ -845,6 +849,7 @@ declare namespace Order_Managment_System.Default {
         CustomerPhoneNumber?: string;
         CustomerAddress?: string;
         CustomerCity?: string;
+        UserId?: number;
         DetailList?: OrdersDetailsRow[];
     }
     namespace OrdersRow {
@@ -855,7 +860,7 @@ declare namespace Order_Managment_System.Default {
         function getLookup(): Q.Lookup<OrdersRow>;
         const deletePermission = "Administration:General";
         const insertPermission = "Administration:General";
-        const readPermission = "Administration:General";
+        const readPermission = "Default:Orders:View";
         const updatePermission = "Administration:General";
         const enum Fields {
             OrderId = "OrderId",
@@ -869,6 +874,7 @@ declare namespace Order_Managment_System.Default {
             CustomerPhoneNumber = "CustomerPhoneNumber",
             CustomerAddress = "CustomerAddress",
             CustomerCity = "CustomerCity",
+            UserId = "UserId",
             DetailList = "DetailList"
         }
     }
@@ -1062,6 +1068,28 @@ declare namespace Order_Managment_System.Membership {
         Email?: string;
         Password?: string;
     }
+}
+declare namespace Order_Managment_System.Modules.Default.Orders {
+    interface OrdersRepresentativesRow {
+        RepresentativeId?: number;
+        OrderId?: number;
+        ProductId?: number;
+    }
+    namespace OrdersRepresentativesRow {
+        const idProperty = "RepresentativeId";
+        const localTextPrefix = "Default.OrdersRepresentatives";
+        const deletePermission = "Default:Orders:View";
+        const insertPermission = "Default:Orders:View";
+        const readPermission = "Default:Orders:View";
+        const updatePermission = "Default:Orders:View";
+        const enum Fields {
+            RepresentativeId = "RepresentativeId",
+            OrderId = "OrderId",
+            ProductId = "ProductId"
+        }
+    }
+}
+declare namespace Order_Managment_System.Modules.Default {
 }
 declare namespace Order_Managment_System.Northwind {
 }

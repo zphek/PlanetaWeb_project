@@ -1,6 +1,5 @@
 ﻿namespace Order_Managment_System.Default {
     export interface OrdersDetailsForm {
-        OrderId: Serenity.IntegerEditor;
         ProductId: Serenity.LookupEditor;
         Quantity: Serenity.IntegerEditor;
         UnitPrice: Serenity.IntegerEditor;
@@ -18,15 +17,14 @@
                 OrdersDetailsForm.init = true;
 
                 var s = Serenity;
-                var w0 = s.IntegerEditor;
-                var w1 = s.LookupEditor;
+                var w0 = s.LookupEditor;
+                var w1 = s.IntegerEditor;
 
                 Q.initFormType(OrdersDetailsForm, [
-                    'OrderId', w0,
-                    'ProductId', w1,
-                    'Quantity', w0,
-                    'UnitPrice', w0,
-                    'Subtotal', w0
+                    'ProductId', w0,
+                    'Quantity', w1,
+                    'UnitPrice', w1,
+                    'Subtotal', w1
                 ]);
             }
         }

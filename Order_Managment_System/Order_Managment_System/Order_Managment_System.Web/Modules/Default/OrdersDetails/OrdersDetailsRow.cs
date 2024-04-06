@@ -22,7 +22,7 @@ namespace Order_Managment_System.Default.Entities
             set { Fields.OrderDetailsId[this] = value; }
         }
 
-        [DisplayName("Order Id"), PrimaryKey, NotNull, Column("order_id"), ForeignKey("[dbo].[Orders]", "order_id"), LeftJoin("jOrder"), TextualField("OrderStatus"), Updatable(false)]
+        [DisplayName("Order Id"), Insertable(false), Column("order_id"), ForeignKey("[dbo].[Orders]", "order_id"), LeftJoin("jOrder"), TextualField("OrderStatus"), Updatable(false)]
         public Int32? OrderId
         {
             get { return Fields.OrderId[this]; }

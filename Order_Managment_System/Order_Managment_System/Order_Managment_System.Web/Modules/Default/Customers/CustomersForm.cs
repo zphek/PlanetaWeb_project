@@ -19,5 +19,7 @@ namespace Order_Managment_System.Default.Forms
         public String PhoneNumber { get; set; }
         public String Address { get; set; }
         public String City { get; set; }
+
+        public Int32 UserId { get; set; }
     }
 }

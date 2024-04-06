@@ -5,6 +5,7 @@
         ProductId?: number;
         Quantity?: number;
         Subtotal?: number;
+        UnitPrice?: number;
         OrderCustomerId?: number;
         OrderOrderDate?: string;
         OrderTotalAmount?: number;
@@ -29,6 +30,7 @@
             ProductId = "ProductId",
             Quantity = "Quantity",
             Subtotal = "Subtotal",
+            UnitPrice = "UnitPrice",
             OrderCustomerId = "OrderCustomerId",
             OrderOrderDate = "OrderOrderDate",
             OrderTotalAmount = "OrderTotalAmount",

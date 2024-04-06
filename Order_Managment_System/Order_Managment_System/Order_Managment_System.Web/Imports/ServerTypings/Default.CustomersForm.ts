@@ -6,6 +6,7 @@
         PhoneNumber: Serenity.StringEditor;
         Address: Serenity.StringEditor;
         City: Serenity.StringEditor;
+        UserId: Serenity.LookupEditor;
     }
 
     export class CustomersForm extends Serenity.PrefixedContext {
@@ -20,6 +21,7 @@
 
                 var s = Serenity;
                 var w0 = s.StringEditor;
+                var w1 = s.LookupEditor;
 
                 Q.initFormType(CustomersForm, [
                     'FirstName', w0,
@@ -27,7 +29,8 @@
                     'Email', w0,
                     'PhoneNumber', w0,
                     'Address', w0,
-                    'City', w0
+                    'City', w0,
+                    'UserId', w1
                 ]);
             }
         }

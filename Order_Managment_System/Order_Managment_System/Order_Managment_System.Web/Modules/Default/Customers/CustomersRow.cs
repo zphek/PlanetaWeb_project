@@ -7,6 +7,7 @@ namespace Order_Managment_System.Default.Entities
     using Serenity.Data.Mapping;
     using System;
     using System.ComponentModel;
+    using Order_Managment_System.Administration.Entities;
     using System.IO;
 
     [ConnectionKey("Default"), Module("Default"), TableName("[dbo].[Customers]")]
@@ -65,6 +66,14 @@ namespace Order_Managment_System.Default.Entities
             set { Fields.City[this] = value; }
         }
 
+        [DisplayName("UserId"), Column("user_id"), Size(255), NotNull]
+        [LookupEditor(typeof(UserRow))]
+        public Int32? UserId
+        {
+            get { return Fields.UserId[this]; }
+            set { Fields.UserId[this] = value; }
+        }
+
         IIdField IIdRow.IdField
         {
             get { return Fields.CustomerId; }
@@ -93,6 +102,7 @@ namespace Order_Managment_System.Default.Entities
             public StringField PhoneNumber;
             public StringField Address;
             public StringField City;
+            public Int32Field UserId;
         }
     }
 }

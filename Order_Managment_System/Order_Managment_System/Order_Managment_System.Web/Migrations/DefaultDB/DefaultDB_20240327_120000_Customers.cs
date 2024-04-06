@@ -18,7 +18,12 @@ namespace Order_Managment_System.Migrations.DefaultDB
                   .WithColumn("email").AsString().Unique()
                   .WithColumn("phone_number").AsString()
                   .WithColumn("address").AsString()
-                  .WithColumn("city").AsString();
+                  .WithColumn("city").AsString()
+                  .WithColumn("user_id").AsInt32().Unique();
+
+            Create.ForeignKey()
+                  .FromTable("Customers").ForeignColumn("user_id")
+                  .ToTable("Users").PrimaryColumn("UserId");
         }
 
         public override void Down()

@@ -1,4 +1,5 @@
-﻿
+﻿/// <reference path="../../Common/Helpers/GridEditorDialog.ts" />
+
 namespace Order_Managment_System.Default {
 
     @Serenity.Decorators.registerClass()

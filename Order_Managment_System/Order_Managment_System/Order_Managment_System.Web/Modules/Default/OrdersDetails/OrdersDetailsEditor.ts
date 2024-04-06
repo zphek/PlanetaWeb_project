@@ -1,4 +1,4 @@
-﻿/// <reference path="../../Common/Helpers/GridEditorBase.ts" />
+﻿/// <reference path="../../Common/Helpers/GridEditorDialog.ts" />
 
 namespace Order_Managment_System.Default {
 

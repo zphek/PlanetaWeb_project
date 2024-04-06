@@ -40,6 +40,18 @@ namespace Order_Managment_System.Default.Repositories
         private class MySaveHandler : SaveRequestHandler<MyRow> { }
         private class MyDeleteHandler : DeleteRequestHandler<MyRow> { }
         private class MyRetrieveHandler : RetrieveRequestHandler<MyRow> { }
-        private class MyListHandler : ListRequestHandler<MyRow> { }
+        private class MyListHandler : ListRequestHandler<MyRow> {
+            protected override void ApplyFilters(SqlQuery query)
+            {
+                base.ApplyFilters(query);
+
+                var user = (UserDefinition)Authorization.UserDefinition;
+
+                if (user.Username != "admin")
+                {
+                    query.Where(fld.UserId == user.Id);
+                }
+            }
+        }
     }
 }

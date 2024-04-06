@@ -18,7 +18,6 @@ namespace Order_Managment_System.Default.Columns
         public String ProductProductName { get; set; }
         public Int32 Quantity { get; set; }
         public Int32 Subtotal { get; set; }
-
         public Int32 UnitPrice { get; set; }
     }
 }

@@ -11,6 +11,7 @@
         CustomerPhoneNumber?: string;
         CustomerAddress?: string;
         CustomerCity?: string;
+        UserId?: number;
         DetailList?: OrdersDetailsRow[];
     }
 
@@ -25,7 +26,7 @@
         }
         export const deletePermission = 'Administration:General';
         export const insertPermission = 'Administration:General';
-        export const readPermission = 'Administration:General';
+        export const readPermission = 'Default:Orders:View';
         export const updatePermission = 'Administration:General';
 
         export declare const enum Fields {
@@ -40,6 +41,7 @@
             CustomerPhoneNumber = "CustomerPhoneNumber",
             CustomerAddress = "CustomerAddress",
             CustomerCity = "CustomerCity",
+            UserId = "UserId",
             DetailList = "DetailList"
         }
     }
